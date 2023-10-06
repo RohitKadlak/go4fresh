@@ -1,0 +1,156 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-06-30 15:50:35.860893",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "customer",
+  "customer_name",
+  "attach_pdf_or_image",
+  "extract_data",
+  "section_break_4",
+  "quotation",
+  "column_break_8",
+  "quotation_date",
+  "section_break_8",
+  "found_items",
+  "not_found_items",
+  "section_break_17",
+  "create_quotation"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "EOT-.YY.-"
+  },
+  {
+   "depends_on": "eval:doc.customer",
+   "fieldname": "customer_name",
+   "fieldtype": "Select",
+   "label": "Select Format",
+   "options": "\nAnkapali\nNighali Coal Mines\nGagangoor"
+  },
+  {
+   "depends_on": "eval:doc.customer_name",
+   "fieldname": "attach_pdf_or_image",
+   "fieldtype": "Attach",
+   "label": "Attach Excel"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "found_items",
+   "fieldtype": "Table",
+   "label": "Found Items",
+   "options": "Upload Items"
+  },
+  {
+   "depends_on": "eval:doc.customer_name",
+   "fieldname": "not_found_items",
+   "fieldtype": "Table",
+   "label": "Not Found Items",
+   "options": "Upload Items"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.attach_pdf_or_image",
+   "fieldname": "extract_data",
+   "fieldtype": "Button",
+   "label": "Extract Data"
+  },
+  {
+   "fieldname": "create_quotation",
+   "fieldtype": "Button",
+   "label": "Create Quotation"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quotation",
+   "fieldtype": "Link",
+   "label": "Quotation",
+   "options": "Quotation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "quotation_date",
+   "fieldtype": "Date",
+   "label": "Quotation Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-07-14 18:44:27.576716",
+ "modified_by": "Administrator",
+ "module": "Go4Fresh",
+ "name": "Excel Upload Tool",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Warehouse User",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "G4F Nashik CC",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

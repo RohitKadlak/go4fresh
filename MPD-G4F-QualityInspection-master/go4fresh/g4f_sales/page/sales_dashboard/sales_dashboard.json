@@ -1,0 +1,23 @@
+{
+ "content": null,
+ "creation": "2023-03-12 23:38:56.291402",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2023-03-12 23:39:05.492589",
+ "modified_by": "Administrator",
+ "module": "G4F Sales",
+ "name": "sales-dashboard",
+ "owner": "Administrator",
+ "page_name": "sales-dashboard",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "Sales Dashboard"
+}

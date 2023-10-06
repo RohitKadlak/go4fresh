@@ -1,0 +1,334 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-03-18 10:30:59.098678",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "lot_no",
+  "sample_no",
+  "sample_details",
+  "product_name",
+  "attach_image",
+  "product_image",
+  "package_size_for_sampling",
+  "gross_weight",
+  "net_weightkg",
+  "size",
+  "small_size",
+  "small_size_in_percentage",
+  "without_patti",
+  "without_patti_in_percentage",
+  "black_smugs",
+  "black_smugs_in_percentage",
+  "dry_roots",
+  "dry_roots_in_percentage",
+  "injury",
+  "injury_in_percentage",
+  "rotten",
+  "rotten_in_percentage",
+  "sprouting",
+  "sprouting_in_percentage",
+  "total_defects",
+  "total_defects_percentage",
+  "minimum_weight",
+  "shape",
+  "outer_color",
+  "whitish_power_texture_present",
+  "outer_skin_is_thick_and_tight",
+  "pulp_colour",
+  "fly_infestation",
+  "physical_damage",
+  "sunburnt",
+  "bottle_shape",
+  "caterpillar_infestaion_patches"
+ ],
+ "fields": [
+  {
+   "fieldname": "lot_no",
+   "fieldtype": "Data",
+   "label": "Lot No."
+  },
+  {
+   "fieldname": "sample_no",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Sample No"
+  },
+  {
+   "fieldname": "sample_details",
+   "fieldtype": "Data",
+   "label": "Sample Details",
+   "read_only": 1
+  },
+  {
+   "fieldname": "product_name",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Product Name",
+   "options": "\nOnion\nWatermelon"
+  },
+  {
+   "depends_on": "eval:doc.product_name == 'Onion'",
+   "fieldname": "gross_weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Gross Weight (KG)"
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.product_name == 'Onion'",
+   "fieldname": "size",
+   "fieldtype": "Data",
+   "label": "Size (MM)",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.product_name == 'Onion'",
+   "fieldname": "injury",
+   "fieldtype": "Float",
+   "label": "Injury (In KG)",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.product_name == 'Onion'",
+   "fieldname": "black_smugs",
+   "fieldtype": "Float",
+   "label": "Black Smugs (In KG)",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.product_name == 'Onion'",
+   "fieldname": "sprouting",
+   "fieldtype": "Float",
+   "label": "Sprouting (in KG)",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.product_name == 'Onion'",
+   "fieldname": "small_size",
+   "fieldtype": "Float",
+   "label": "Small Size (in KG)",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.product_name == 'Onion'",
+   "fieldname": "total_defects",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Defects (In KG)",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.product_name == 'Onion'",
+   "fieldname": "total_defects_percentage",
+   "fieldtype": "Float",
+   "label": "Total Defects (In %)",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.product_name == 'Onion'",
+   "fieldname": "injury_in_percentage",
+   "fieldtype": "Float",
+   "label": "Injury (In %)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attach_image",
+   "fieldtype": "Attach Image",
+   "label": "Attach Image"
+  },
+  {
+   "fieldname": "product_image",
+   "fieldtype": "Image",
+   "label": "Product Image",
+   "options": "attach_image"
+  },
+  {
+   "depends_on": "eval:doc.product_name == 'Onion'",
+   "fieldname": "black_smugs_in_percentage",
+   "fieldtype": "Float",
+   "label": "Black Smugs (In %)"
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.product_name == 'Onion'",
+   "fieldname": "sprouting_in_percentage",
+   "fieldtype": "Float",
+   "label": "Sprouting (In %)",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.product_name == 'Onion'",
+   "fieldname": "small_size_in_percentage",
+   "fieldtype": "Float",
+   "label": "Small Size (In %)",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.product_name == 'Watermelon'",
+   "fieldname": "minimum_weight",
+   "fieldtype": "Float",
+   "label": "Minimum Weight(KG)",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.product_name == 'Watermelon'",
+   "fieldname": "shape",
+   "fieldtype": "Select",
+   "label": "Shape",
+   "options": "\nOval\nRound",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.product_name == 'Watermelon'",
+   "fieldname": "outer_color",
+   "fieldtype": "Select",
+   "label": "Outer Color",
+   "options": "\nDark green\nLight green\nStriped Green",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.product_name == 'Watermelon'",
+   "fieldname": "whitish_power_texture_present",
+   "fieldtype": "Select",
+   "label": "Whitish Power Texture Present",
+   "options": "\nYes\nNo",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.product_name == 'Watermelon'",
+   "fieldname": "outer_skin_is_thick_and_tight",
+   "fieldtype": "Select",
+   "label": "Outer skin is thick and tight",
+   "options": "\nYes\nNo",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.product_name == 'Watermelon'",
+   "fieldname": "pulp_colour",
+   "fieldtype": "Select",
+   "label": "Pulp Colour",
+   "options": "\nPink\nLight red\nRed\nDark red",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.product_name == 'Watermelon'",
+   "fieldname": "fly_infestation",
+   "fieldtype": "Select",
+   "label": "Fly Infestation",
+   "options": "\nYes\nNo",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.product_name == 'Watermelon'",
+   "fieldname": "physical_damage",
+   "fieldtype": "Select",
+   "label": "Physical Damage",
+   "options": "\nYes\nNo",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.product_name == 'Watermelon'",
+   "fieldname": "sunburnt",
+   "fieldtype": "Select",
+   "label": "Sunburnt",
+   "options": "\nYes\nNo",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.product_name == 'Watermelon'",
+   "fieldname": "bottle_shape",
+   "fieldtype": "Select",
+   "label": "Bottle Shape",
+   "options": "\nYes\nNo",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.product_name == 'Watermelon'",
+   "fieldname": "caterpillar_infestaion_patches",
+   "fieldtype": "Float",
+   "label": "Caterpillar infestaion patches(%)",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.product_name == 'Onion'",
+   "fieldname": "package_size_for_sampling",
+   "fieldtype": "Data",
+   "label": "Package Size For Sampling"
+  },
+  {
+   "depends_on": "eval:doc.product_name == 'Onion'",
+   "fieldname": "net_weightkg",
+   "fieldtype": "Float",
+   "label": "Net Weight(KG)"
+  },
+  {
+   "depends_on": "eval:doc.product_name == 'Onion'",
+   "fieldname": "without_patti",
+   "fieldtype": "Float",
+   "label": "Without Patti (In KG)"
+  },
+  {
+   "depends_on": "eval:doc.product_name == 'Onion'",
+   "fieldname": "without_patti_in_percentage",
+   "fieldtype": "Float",
+   "label": "Without Patti (In %)"
+  },
+  {
+   "depends_on": "eval:doc.product_name == 'Onion'",
+   "fieldname": "rotten",
+   "fieldtype": "Float",
+   "label": "Rotten (In KG)"
+  },
+  {
+   "depends_on": "eval:doc.product_name == 'Onion'",
+   "fieldname": "rotten_in_percentage",
+   "fieldtype": "Float",
+   "label": "Rotten (In %)"
+  },
+  {
+   "depends_on": "eval:doc.product_name == 'Onion'",
+   "fieldname": "dry_roots",
+   "fieldtype": "Float",
+   "label": "Visual Double (In KG)"
+  },
+  {
+   "depends_on": "eval:doc.product_name == 'Onion'",
+   "fieldname": "dry_roots_in_percentage",
+   "fieldtype": "Float",
+   "label": "Visual Double (In %)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-06-14 15:41:28.172563",
+ "modified_by": "Administrator",
+ "module": "G4F Quality",
+ "name": "G4F QI Sample",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

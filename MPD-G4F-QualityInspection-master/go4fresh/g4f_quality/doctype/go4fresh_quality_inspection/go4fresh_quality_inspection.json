@@ -1,0 +1,636 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-03-18 10:30:27.971859",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "grn_number",
+  "grn_quantity",
+  "vendor_name",
+  "lot_no",
+  "product_name",
+  "cluster",
+  "order_size",
+  "order_packing_size",
+  "packaging_bag",
+  "sowing_date",
+  "days_since_sowing",
+  "column_break_5",
+  "select_destination",
+  "source_address",
+  "destination_address",
+  "distance_between_source_and_destination",
+  "receipt_date",
+  "inspection_date",
+  "qc_officer",
+  "supervisor",
+  "consignee_name",
+  "vehicle_no",
+  "container_no",
+  "no_of_bags",
+  "section_break_11",
+  "product_type",
+  "color",
+  "patti_dry_layer",
+  "test",
+  "column_break_23",
+  "dry_roots_available",
+  "texture",
+  "machanical_damage",
+  "pulp_temp",
+  "remarks",
+  "sample_button_section",
+  "enter_sample_data",
+  "quantative_section",
+  "sample_no",
+  "sample_details",
+  "attach_image",
+  "product_image",
+  "package_size_for_sampling",
+  "gross_weight",
+  "net_weightkg",
+  "size",
+  "small_size",
+  "without_pattikg",
+  "black_smugs",
+  "dry_roots",
+  "injury",
+  "rotten",
+  "sprouting",
+  "total_defects",
+  "total_defects_percentage",
+  "minimum_weight",
+  "shape",
+  "outer_color",
+  "whitish_power_texture_present",
+  "outer_skin_is_thick_and_tight",
+  "pulp_colour",
+  "fly_infestation",
+  "physical_damage",
+  "sunburnt",
+  "bottle_shape",
+  "caterpillar_infestaion_patches",
+  "submit_sample",
+  "section_break_22",
+  "create_new_lot",
+  "qi_sample",
+  "section_break_26",
+  "column_break_27",
+  "total_samples",
+  "total_gross_weight",
+  "total_defect",
+  "average_defect",
+  "section_break_25",
+  "done",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "grn_number",
+   "fieldtype": "Data",
+   "label": "GRN Number"
+  },
+  {
+   "fieldname": "grn_quantity",
+   "fieldtype": "Data",
+   "label": "GRN Quantity (In KG)"
+  },
+  {
+   "fieldname": "vendor_name",
+   "fieldtype": "Data",
+   "label": "Vendor Name"
+  },
+  {
+   "fieldname": "lot_no",
+   "fieldtype": "Data",
+   "label": "Lot No.",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "receipt_date",
+   "fieldtype": "Date",
+   "label": "Receipt Date"
+  },
+  {
+   "default": "Today",
+   "fieldname": "inspection_date",
+   "fieldtype": "Date",
+   "label": "Inspection Date"
+  },
+  {
+   "fieldname": "qc_officer",
+   "fieldtype": "Data",
+   "label": "QC Officer"
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Data",
+   "label": "Supervisor"
+  },
+  {
+   "depends_on": "eval:doc.docstatus !=\"1\"",
+   "fieldname": "enter_sample_data",
+   "fieldtype": "Button",
+   "label": "Enter Sample Data"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break",
+   "label": "Qualitative"
+  },
+  {
+   "default": "1",
+   "fieldname": "sample_no",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Sample No"
+  },
+  {
+   "fieldname": "sample_details",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "<div style=\"text-align: center; font-size: 22px;\"><b>Sample Details</b></div>"
+  },
+  {
+   "fieldname": "product_name",
+   "fieldtype": "Select",
+   "label": "Product Name",
+   "options": "\nOnion\nWatermelon"
+  },
+  {
+   "default": "1.0",
+   "fieldname": "gross_weight",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Gross Weight (KG)"
+  },
+  {
+   "fieldname": "size",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Size (MM)"
+  },
+  {
+   "fieldname": "injury",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Injury (in KG)"
+  },
+  {
+   "fieldname": "black_smugs",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Black Smugs (in KG)"
+  },
+  {
+   "fieldname": "sprouting",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Sprouting (in KG)"
+  },
+  {
+   "fieldname": "small_size",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Small Size (in KG)"
+  },
+  {
+   "fieldname": "submit_sample",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Submit Sample"
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "create_new_lot",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Create New Lot"
+  },
+  {
+   "fieldname": "section_break_25",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "done",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "<div style=\"background-color: #11f255; font-size: 22px; text-align: center;\"><b>&nbsp;&nbsp;Done&nbsp;&nbsp;</b></div>"
+  },
+  {
+   "fieldname": "qi_sample",
+   "fieldtype": "Table",
+   "label": "QI Sample",
+   "options": "G4F QI Sample"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "QC-.abbr.-"
+  },
+  {
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.product_name == \"Onion\"",
+   "fieldname": "total_samples",
+   "fieldtype": "Int",
+   "label": "Total Samples",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.product_name == \"Onion\"",
+   "fieldname": "total_gross_weight",
+   "fieldtype": "Float",
+   "label": "Total Gross Weight",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.product_name == \"Onion\"",
+   "fieldname": "total_defect",
+   "fieldtype": "Float",
+   "label": "Total Defect (In KG)",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.product_name == \"Onion\"",
+   "fieldname": "average_defect",
+   "fieldtype": "Float",
+   "label": "Total Defect (In %)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_defects",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Total Defects (In KG)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_defects_percentage",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Total Defects Percentage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Go4Fresh Quality Inspection",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "attach_image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Attach Image"
+  },
+  {
+   "fieldname": "product_image",
+   "fieldtype": "Image",
+   "hidden": 1,
+   "label": "Product Image",
+   "options": "attach_image"
+  },
+  {
+   "fieldname": "minimum_weight",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Minimum Weight(KG)"
+  },
+  {
+   "fieldname": "shape",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Shape",
+   "options": "\nOval\nRound"
+  },
+  {
+   "fieldname": "outer_color",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Outer Colour",
+   "options": "\nDark green\nLight green\nStriped Green"
+  },
+  {
+   "fieldname": "whitish_power_texture_present",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Whitish Power Texture Present",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "outer_skin_is_thick_and_tight",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Outer skin is thick and tight",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "pulp_colour",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Pulp Colour",
+   "options": "\nPink\nLight red\nRed\nDark red"
+  },
+  {
+   "fieldname": "fly_infestation",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Fly Infestation",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "physical_damage",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Physical Damage",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "sunburnt",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Sunburnt",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "bottle_shape",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Bottle Shape",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "caterpillar_infestaion_patches",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Caterpillar infestaion patches(%)"
+  },
+  {
+   "fieldname": "source_address",
+   "fieldtype": "Small Text",
+   "label": "Source Address",
+   "read_only": 1
+  },
+  {
+   "fieldname": "select_destination",
+   "fieldtype": "Select",
+   "label": "Select Destination",
+   "options": "\nOtur\nMumbai"
+  },
+  {
+   "fieldname": "destination_address",
+   "fieldtype": "Small Text",
+   "label": "Destination Address",
+   "read_only": 1
+  },
+  {
+   "fieldname": "distance_between_source_and_destination",
+   "fieldtype": "Data",
+   "label": "Distance Between Source and Destination",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sowing_date",
+   "fieldtype": "Date",
+   "label": "Sowing Date"
+  },
+  {
+   "fieldname": "days_since_sowing",
+   "fieldtype": "Int",
+   "label": "Days Since Sowing",
+   "read_only": 1
+  },
+  {
+   "fieldname": "quantative_section",
+   "fieldtype": "Section Break",
+   "label": "Quantative"
+  },
+  {
+   "depends_on": "eval:doc.product_name ===\"Onion\"",
+   "fieldname": "color",
+   "fieldtype": "Select",
+   "label": "Color",
+   "options": "\nLight Red\nRed\nDark Red"
+  },
+  {
+   "depends_on": "eval:doc.product_name ===\"Onion\"",
+   "fieldname": "patti_dry_layer",
+   "fieldtype": "Select",
+   "label": "Patti Dry Layer",
+   "options": "\nSingle patti\nDoubble patti\nTriple patti"
+  },
+  {
+   "depends_on": "eval:doc.product_name ===\"Onion\"",
+   "fieldname": "test",
+   "fieldtype": "Select",
+   "label": "Test",
+   "options": "\nPungent"
+  },
+  {
+   "depends_on": "eval:doc.product_name ===\"Onion\"",
+   "fieldname": "texture",
+   "fieldtype": "Select",
+   "label": "Texture",
+   "options": "\nCompact"
+  },
+  {
+   "depends_on": "eval:doc.product_name ===\"Onion\"",
+   "fieldname": "machanical_damage",
+   "fieldtype": "Select",
+   "label": "Mechecinal Damage",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sample_button_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "package_size_for_sampling",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Package Size For Sampling"
+  },
+  {
+   "fieldname": "net_weightkg",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Net Weight(KG)"
+  },
+  {
+   "fieldname": "without_pattikg",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Without Patti(KG)"
+  },
+  {
+   "fieldname": "rotten",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Rotten(KG)"
+  },
+  {
+   "fieldname": "dry_roots",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Visual Double (In KG)"
+  },
+  {
+   "depends_on": "eval:doc.product_name ===\"Onion\"",
+   "fieldname": "cluster",
+   "fieldtype": "Select",
+   "label": "Cluster",
+   "options": "\nPimpalgaon Baswant\nLasalgaon\nChandwad\nYeola\nAndarsul\nVani\nDindori\nUmrana\nMungse\nManmad\nNandgaon\nMalegaon\nSatana\nNagpur\nKaranjad\nPimpalner\nNizampur jaitane\nNer\nDhule\nZodga\nKarmala\nGhodegaon\nGeorai\nRahuri\nWambhori\nChalisgaon\nOtur\nNarayangaon\nParner\nNagar\nJunnar\nKarmala\nSolapur\nAbhona\nKalwan"
+  },
+  {
+   "depends_on": "eval:doc.product_name ===\"Onion\"",
+   "fieldname": "order_size",
+   "fieldtype": "Select",
+   "label": "Order Size",
+   "options": "\n25\n30\n35\n40\n45\n50\n55\n60\n65\n70"
+  },
+  {
+   "depends_on": "eval:doc.product_name ===\"Onion\"",
+   "fieldname": "order_packing_size",
+   "fieldtype": "Data",
+   "label": "Order Packing Size"
+  },
+  {
+   "depends_on": "eval:doc.product_name ===\"Onion\"",
+   "fieldname": "packaging_bag",
+   "fieldtype": "Select",
+   "label": "Packaging Bag",
+   "options": "\nMesh/Leno Bag\nJut Bag\nCarpet Jut Bag\nNet Bag"
+  },
+  {
+   "fieldname": "consignee_name",
+   "fieldtype": "Data",
+   "label": "Consignee Name"
+  },
+  {
+   "fieldname": "vehicle_no",
+   "fieldtype": "Data",
+   "label": "Vehicle No"
+  },
+  {
+   "fieldname": "container_no",
+   "fieldtype": "Data",
+   "label": "Container No"
+  },
+  {
+   "fieldname": "no_of_bags",
+   "fieldtype": "Data",
+   "label": "No Of Bags"
+  },
+  {
+   "depends_on": "eval:doc.product_name ===\"Onion\"",
+   "fieldname": "product_type",
+   "fieldtype": "Select",
+   "label": "Product Type",
+   "options": "\nRed fresh Onion\nRangda fresh onion\nGarva(summar) fresh onion\nGarva(summar) stored onion"
+  },
+  {
+   "depends_on": "eval:doc.product_name ===\"Onion\"",
+   "fieldname": "dry_roots_available",
+   "fieldtype": "Select",
+   "label": "Dry Roots Available",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.product_name ===\"Onion\"",
+   "fieldname": "pulp_temp",
+   "fieldtype": "Data",
+   "label": "Pulp Temp."
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.product_name ===\"Onion\"",
+   "fieldname": "remarks",
+   "fieldtype": "Text Editor",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-14 16:27:24.218300",
+ "modified_by": "Administrator",
+ "module": "G4F Quality",
+ "name": "Go4Fresh Quality Inspection",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "QC Officer",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "QC Supervisor",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

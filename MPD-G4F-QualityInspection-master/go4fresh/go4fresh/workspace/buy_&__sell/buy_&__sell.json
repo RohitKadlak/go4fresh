@@ -1,0 +1,101 @@
+{
+ "cards_label": "Report",
+ "category": "Modules",
+ "charts": [],
+ "creation": "2023-01-18 11:59:31.519122",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "icon": "organization",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Buy &  Sell",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Stock Balance",
+   "link_to": "Stock Balance",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Stock Ledger",
+   "link_to": "Stock Ledger",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2023-01-18 12:01:36.701800",
+ "modified_by": "bhavana.duragkar@mannlowe.com",
+ "module": "Go4Fresh",
+ "name": "Buy &  Sell",
+ "owner": "bhavana.duragkar@mannlowe.com",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "label": "  1  Upload Buyers PO",
+   "link_to": "Upload PO Tool",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "  2 Sales Order",
+   "link_to": "Sales Order",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "3 Material Request",
+   "link_to": "Material Request",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "4 Purchase Order",
+   "link_to": "Purchase Order",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "5 Purchase Receipt",
+   "link_to": "Purchase Receipt",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "6 Quality Inspection",
+   "link_to": "Quality Inspection",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "7 Repack",
+   "link_to": "Stock Entry",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "8 Pick List",
+   "link_to": "Pick List",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "9 Delivery Note",
+   "link_to": "Delivery Note",
+   "type": "DocType"
+  }
+ ],
+ "shortcuts_label": "Transactions"
+}

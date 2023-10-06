@@ -1,0 +1,23 @@
+{
+ "content": null,
+ "creation": "2023-03-12 23:32:31.640680",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2023-03-12 23:34:57.759874",
+ "modified_by": "Administrator",
+ "module": "G4F Purchase",
+ "name": "purchase-dashboard",
+ "owner": "Administrator",
+ "page_name": "purchase-dashboard",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "Purchase Dashboard"
+}

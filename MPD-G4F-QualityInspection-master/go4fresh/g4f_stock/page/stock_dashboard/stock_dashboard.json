@@ -1,0 +1,23 @@
+{
+ "content": null,
+ "creation": "2023-03-12 23:35:42.306091",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2023-03-12 23:35:53.463772",
+ "modified_by": "Administrator",
+ "module": "G4F Stock",
+ "name": "stock-dashboard",
+ "owner": "Administrator",
+ "page_name": "stock-dashboard",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "Stock Dashboard"
+}

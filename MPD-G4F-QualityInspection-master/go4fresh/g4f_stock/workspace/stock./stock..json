@@ -1,0 +1,65 @@
+{
+ "cards_label": "Stock Report",
+ "category": "Modules",
+ "charts": [],
+ "creation": "2023-02-08 12:22:16.429862",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "icon": "stock",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Stock.",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Report",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "Item",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Stock Balance",
+   "link_to": "Stock Balance",
+   "link_type": "Report",
+   "onboard": 1,
+   "type": "Link"
+  }
+ ],
+ "modified": "2023-03-15 09:22:04.803066",
+ "modified_by": "Administrator",
+ "module": "G4F Stock",
+ "name": "Stock.",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 1,
+ "shortcuts": [
+  {
+   "doc_view": "Dashboard",
+   "label": "1. Stock Dashboard",
+   "link_to": "stock-dashboard",
+   "type": "Page"
+  },
+  {
+   "doc_view": "New",
+   "label": "2. Add Product",
+   "link_to": "Item",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "New",
+   "label": "3. Add Warehouse",
+   "link_to": "Warehouse",
+   "type": "DocType"
+  }
+ ],
+ "shortcuts_label": "Stock"
+}

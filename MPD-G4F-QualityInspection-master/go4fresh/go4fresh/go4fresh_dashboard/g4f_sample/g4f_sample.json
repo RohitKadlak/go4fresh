@@ -1,0 +1,21 @@
+{
+ "cards": [],
+ "charts": [
+  {
+   "chart": "Material Request Analysis",
+   "width": "Full"
+  }
+ ],
+ "creation": "2022-04-29 16:48:40.395209",
+ "dashboard_name": "G4F Sample",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2022-04-29 16:48:40.395209",
+ "modified_by": "Administrator",
+ "module": "Go4Fresh",
+ "name": "G4F Sample",
+ "owner": "Administrator"
+}

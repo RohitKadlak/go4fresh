@@ -1,0 +1,144 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "creation": "2023-02-08 09:50:14.307469",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "icon": "organization",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Purchase",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Master Data",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Seller Registration List",
+   "link_to": "Supplier",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Seller Registration Form",
+   "link_to": "Seller Registration Form",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Crop List",
+   "link_to": "G4F Crop List",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Crop Planner List",
+   "link_to": "G4F Crop Planner",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2023-03-15 11:08:20.747448",
+ "modified_by": "ramesh.mhaske@mannlowe.com",
+ "module": "G4F Purchase",
+ "name": "Purchase",
+ "owner": "bhavana.duragkar@mannlowe.com",
+ "pin_to_bottom": 0,
+ "pin_to_top": 1,
+ "shortcuts": [
+  {
+   "doc_view": "Dashboard",
+   "label": "1. Purchase Dashboard",
+   "link_to": "purchase-dashboard",
+   "type": "Page"
+  },
+  {
+   "doc_view": "New",
+   "label": "2. Add Seller",
+   "link_to": "Supplier",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "New",
+   "label": "3. Add Crop List",
+   "link_to": "G4F Crop List",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "New",
+   "label": "4. Add Crop Planner",
+   "link_to": "G4F Crop Planner",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "5. Material Request",
+   "link_to": "Material Request",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "6. Request for Quotation",
+   "link_to": "Request for Quotation",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "7. Supplier Quotation",
+   "link_to": "Supplier Quotation",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "8. Purchase Order",
+   "link_to": "Purchase Order",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "9. Goods Receipt",
+   "link_to": "Purchase Receipt",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "10. Quality Check",
+   "link_to": "Quality Inspection",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "11. Purchase Invoice",
+   "link_to": "Purchase Invoice",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "12. Payment Entry",
+   "link_to": "Payment Entry",
+   "type": "DocType"
+  }
+ ],
+ "shortcuts_label": "Purchase "
+}

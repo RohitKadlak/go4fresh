@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include go4fresh *.css
+recursive-include go4fresh *.csv
+recursive-include go4fresh *.html
+recursive-include go4fresh *.ico
+recursive-include go4fresh *.js
+recursive-include go4fresh *.json
+recursive-include go4fresh *.md
+recursive-include go4fresh *.png
+recursive-include go4fresh *.py
+recursive-include go4fresh *.svg
+recursive-include go4fresh *.txt
+recursive-exclude go4fresh *.pyc

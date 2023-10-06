@@ -1,0 +1,713 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_rename": 1,
+ "autoname": "field:mobile_no",
+ "creation": "2022-07-19 17:37:00.505767",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "farm_linkage_associate",
+  "center_incharge",
+  "column_break_3",
+  "status",
+  "section_break_2",
+  "supplier_type",
+  "company",
+  "abbr",
+  "column_break_6",
+  "mobile_no",
+  "section_break_4",
+  "farmer_sub_type",
+  "company_sub_type",
+  "farmer_group_sub_type",
+  "supplier_name",
+  "pan",
+  "gst_no",
+  "contact_person_name",
+  "alternate_mobile_no",
+  "email_id",
+  "aadhar_card_no",
+  "attach_kyc_documents",
+  "column_break_13",
+  "primary_address",
+  "latitude",
+  "postal_code",
+  "taluka",
+  "district",
+  "state",
+  "total_farm_area",
+  "narest_market",
+  "section_break_20",
+  "company_type",
+  "trade_experience",
+  "annual_volume",
+  "annual_sales_value",
+  "digital_platform",
+  "no_of_vendors",
+  "no_of_member_farmers",
+  "team_size",
+  "gender",
+  "education",
+  "years_in_farming",
+  "farm_type",
+  "total_family_members",
+  "no_of_farm_labour_required",
+  "owned_vehicle_types",
+  "own_car",
+  "own_truck",
+  "own_pickup",
+  "own_motorbike",
+  "own_tractor",
+  "own_no_vehicle",
+  "total_owned_vehicles",
+  "non_fv_crops_cultivated",
+  "source_of_irrigation",
+  "column_break_31",
+  "contract_staff",
+  "office_type",
+  "warehouse",
+  "no_of_warehouses",
+  "packhouse_area",
+  "processing_unit",
+  "farm_infrastructure",
+  "rental_equipments",
+  "pickup_van_equ",
+  "tractor_equ",
+  "harvestor_equ",
+  "drone_equ",
+  "rotavator_equ",
+  "cultivator_equ",
+  "mechanical_sprayers_equ",
+  "other_equipments",
+  "number_of_cattle",
+  "transporter_name",
+  "transporter_contact_number",
+  "current_supply_markets",
+  "bank_name",
+  "bank_ac_no",
+  "ifsc_code",
+  "type_of_loans",
+  "total_loan_amount",
+  "other_income_sources",
+  "total_other_income",
+  "remark_if_any",
+  "section_break_23",
+  "supplier",
+  "column_break_22",
+  "user",
+  "section_break_24",
+  "button",
+  "aggre_button",
+  "section_break_65",
+  "route"
+ ],
+ "fields": [
+  {
+   "fieldname": "supplier_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Seller/Firm Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mobile No",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email Id"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "pan",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PAN"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Farmer\"",
+   "fieldname": "aadhar_card_no",
+   "fieldtype": "Data",
+   "label": "Aadhar Card No"
+  },
+  {
+   "fieldname": "supplier_type",
+   "fieldtype": "Select",
+   "label": "Seller Type",
+   "options": "\nFarmer\nCompany/Traders\nFarmer Group",
+   "reqd": 1
+  },
+  {
+   "fieldname": "primary_address",
+   "fieldtype": "Data",
+   "label": "Address",
+   "mandatory_depends_on": "eval:doc.status ===\"Verified Seller\""
+  },
+  {
+   "fieldname": "taluka",
+   "fieldtype": "Data",
+   "label": "Tehsil",
+   "mandatory_depends_on": "eval:doc.status ===\"Verified Seller\""
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "label": "District",
+   "mandatory_depends_on": "eval:doc.status ===\"Verified Seller\""
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.status === \"Verified Seller\" && doc.supplier_type === \"Farmer\"",
+   "fieldname": "button",
+   "fieldtype": "HTML",
+   "label": "button",
+   "options": "<div class=\"text-right\" id=\"form-step-footer\">\n\t\t\t\t<button class=\"btn btn-success btn-supplier btn-sm ml-2\">Create Seller &amp; User</button></div>",
+   "set_only_once": 1
+  },
+  {
+   "depends_on": "eval:doc.status === \"Verified Seller\"",
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Attach Aadhar Card Or PAN Image",
+   "fieldname": "attach_kyc_documents",
+   "fieldtype": "Attach",
+   "ignore_user_permissions": 1,
+   "label": "Attach KYC Documents"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State",
+   "mandatory_depends_on": "eval:doc.status ===\"Verified Seller\""
+  },
+  {
+   "fieldname": "postal_code",
+   "fieldtype": "Data",
+   "label": "Pin Code",
+   "mandatory_depends_on": "eval:doc.status ===\"Verified Seller\""
+  },
+  {
+   "fieldname": "total_farm_area",
+   "fieldtype": "Data",
+   "label": "Total Farm Area",
+   "mandatory_depends_on": "eval:doc.status ===\"Verified Seller\""
+  },
+  {
+   "fieldname": "narest_market",
+   "fieldtype": "Data",
+   "label": "Nearest Market"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "gst_no",
+   "fieldtype": "Data",
+   "label": "GST / Licence no"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "contact_person_name",
+   "fieldtype": "Data",
+   "label": "Contact Person Name"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Farmer\"",
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "\nMale\nFemale\nTransgender"
+  },
+  {
+   "fieldname": "section_break_23",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Farmer\"",
+   "fieldname": "education",
+   "fieldtype": "Select",
+   "label": "Education",
+   "options": "\nPost Graduation\nAgri Graduate\nAny Other Graduate\nUpto 12th Class\nNone of the above"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Farmer\"",
+   "fieldname": "years_in_farming",
+   "fieldtype": "Data",
+   "label": "Years in Farming"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Farmer\"",
+   "fieldname": "farm_type",
+   "fieldtype": "Select",
+   "label": "Farm Type",
+   "options": "\nOwned\nLeased\nNA"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Farmer\"",
+   "fieldname": "total_family_members",
+   "fieldtype": "Data",
+   "label": "Total Family Members"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Farmer\"",
+   "fieldname": "no_of_farm_labour_required",
+   "fieldtype": "Data",
+   "label": "No. of Farm Labour Required"
+  },
+  {
+   "fieldname": "owned_vehicle_types",
+   "fieldtype": "Heading",
+   "label": "Owned Vehicle Types"
+  },
+  {
+   "fieldname": "total_owned_vehicles",
+   "fieldtype": "Data",
+   "label": "Total Owned Vehicles"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Farmer\"",
+   "fieldname": "non_fv_crops_cultivated",
+   "fieldtype": "Select",
+   "label": "Non F&V Crops Cultivated",
+   "options": "\nWheat / Paddy\nOther Cereals\nPulses\nSugarcane\nOilseeds\nSpices / Herbs\nPlantations\nCotton/Jute\nFloriculture"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Farmer\"",
+   "fieldname": "source_of_irrigation",
+   "fieldtype": "Select",
+   "label": "Source of Irrigation",
+   "options": "\nWell\nBorewell\nFarm Pond\nLift Irrigation"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "farm_infrastructure",
+   "fieldtype": "Select",
+   "label": "Farm Infrastructure",
+   "options": "\nTrelis\nShade Net\nPolyhouse\nOrganic Manure\nOrganic Sprays\nFarm Packhouse\nPlastic Crates\nOthers"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "rental_equipments",
+   "fieldtype": "Heading",
+   "label": "Rental Equipments"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "number_of_cattle",
+   "fieldtype": "Data",
+   "label": "Number of Cattle"
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name"
+  },
+  {
+   "fieldname": "bank_ac_no",
+   "fieldtype": "Data",
+   "label": "Bank A/C No."
+  },
+  {
+   "fieldname": "ifsc_code",
+   "fieldtype": "Data",
+   "label": "IFSC Code"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Farmer\"",
+   "fieldname": "type_of_loans",
+   "fieldtype": "Select",
+   "label": "Type of Loans",
+   "options": "\nKisan Credit Card\nTractor Loan\nTerm Loan\nWarehouse Receipt Loan\nPersonal Loan\nAny Other"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Farmer\"",
+   "fieldname": "total_loan_amount",
+   "fieldtype": "Currency",
+   "label": "Total Loan Amount"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Farmer\"",
+   "fieldname": "other_income_sources",
+   "fieldtype": "Select",
+   "label": "Other Income Sources",
+   "options": "\nDairy\nPoultry\nTransport\nShop\nServices\nTeacher\nGovernment Job\nPrivate Job\nAny Other"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Farmer\"",
+   "fieldname": "total_other_income",
+   "fieldtype": "Currency",
+   "label": "Total Other Income"
+  },
+  {
+   "fieldname": "column_break_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "company_type",
+   "fieldtype": "Select",
+   "label": "Company Type",
+   "options": "\nPropritership\nPartnership\nPrivate Limited Company\nPublic Limited Company\nFPC / FPO\nNA"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "trade_experience",
+   "fieldtype": "Data",
+   "label": "Trade Experience"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "annual_volume",
+   "fieldtype": "Data",
+   "label": "Annual Volume (MT)"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "annual_sales_value",
+   "fieldtype": "Data",
+   "label": "Annual Sales Value"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "digital_platform",
+   "fieldtype": "Select",
+   "label": "Digital Platform",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"",
+   "fieldname": "no_of_vendors",
+   "fieldtype": "Data",
+   "label": "No. of Vendors"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "team_size",
+   "fieldtype": "Data",
+   "label": "Team Size"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "no_of_member_farmers",
+   "fieldtype": "Data",
+   "label": "No. of Member Farmers"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "contract_staff",
+   "fieldtype": "Data",
+   "label": "Contract Labours"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "office_type",
+   "fieldtype": "Select",
+   "label": "Office Type",
+   "options": "\nOwn\nLease\nNA"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "warehouse",
+   "fieldtype": "Select",
+   "label": "Packhouse Type",
+   "options": "\nOwned\nLeased\nNA"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "no_of_warehouses",
+   "fieldtype": "Data",
+   "label": "No. of Packhouses"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "processing_unit",
+   "fieldtype": "Select",
+   "label": "Processing Unit",
+   "options": "\nOwned\nLeased\nNA"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "alternate_mobile_no",
+   "fieldtype": "Data",
+   "label": "Alternate Mobile No"
+  },
+  {
+   "default": "Farmer",
+   "depends_on": "eval:doc.supplier_type == \"Farmer\"",
+   "fieldname": "farmer_sub_type",
+   "fieldtype": "Select",
+   "label": "Seller Sub-Type",
+   "mandatory_depends_on": "eval:doc.supplier_type == \"Farmer\"",
+   "options": "Farmer"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"",
+   "fieldname": "company_sub_type",
+   "fieldtype": "Select",
+   "label": "Seller Sub-Type",
+   "options": "\nCompany\nMandi Traders"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "farmer_group_sub_type",
+   "fieldtype": "Select",
+   "label": "Seller Sub-Type",
+   "options": "\nFarm Aggregator\nFarm Group/SHG\nCo Operative\nFPC/FPO"
+  },
+  {
+   "fieldname": "section_break_65",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Route"
+  },
+  {
+   "default": "Pending Review",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nPending Review\nVerified Seller\nApproved Seller\nRejected\nApproved Aggregator"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Data",
+   "label": "Longitude & Latitude"
+  },
+  {
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "packhouse_area",
+   "fieldtype": "Data",
+   "label": "Packhouse Area (Sq Ft)"
+  },
+  {
+   "fieldname": "transporter_name",
+   "fieldtype": "Data",
+   "label": "Transporter Name"
+  },
+  {
+   "fieldname": "transporter_contact_number",
+   "fieldtype": "Data",
+   "label": "Transporter Contact Number"
+  },
+  {
+   "fieldname": "current_supply_markets",
+   "fieldtype": "Data",
+   "label": "Current Supply Market/Locations"
+  },
+  {
+   "fieldname": "remark_if_any",
+   "fieldtype": "Small Text",
+   "label": "Remark If Any"
+  },
+  {
+   "fieldname": "farm_linkage_associate",
+   "fieldtype": "Link",
+   "label": "Farm Linkage Associate",
+   "options": "User"
+  },
+  {
+   "fieldname": "center_incharge",
+   "fieldtype": "Link",
+   "label": "Center Incharge",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fetch_from": "company.abbr",
+   "fieldname": "abbr",
+   "fieldtype": "Read Only",
+   "label": "Abbr"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "other_equipments",
+   "fieldtype": "Check",
+   "label": "Other"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "pickup_van_equ",
+   "fieldtype": "Check",
+   "label": "Pickup Van"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "tractor_equ",
+   "fieldtype": "Check",
+   "label": "Tractor"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "harvestor_equ",
+   "fieldtype": "Check",
+   "label": "Harvestor"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "drone_equ",
+   "fieldtype": "Check",
+   "label": "Drone"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "rotavator_equ",
+   "fieldtype": "Check",
+   "label": "Rotavator"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "cultivator_equ",
+   "fieldtype": "Check",
+   "label": "Cultivator"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.supplier_type == \"Company/Traders\"||doc.supplier_type == \"Farmer Group\"",
+   "fieldname": "mechanical_sprayers_equ",
+   "fieldtype": "Check",
+   "label": "Mechanical Sprayers"
+  },
+  {
+   "default": "0",
+   "fieldname": "own_car",
+   "fieldtype": "Check",
+   "label": "Car"
+  },
+  {
+   "default": "0",
+   "fieldname": "own_truck",
+   "fieldtype": "Check",
+   "label": "Truck"
+  },
+  {
+   "default": "0",
+   "fieldname": "own_pickup",
+   "fieldtype": "Check",
+   "label": "Pickup"
+  },
+  {
+   "default": "0",
+   "fieldname": "own_motorbike",
+   "fieldtype": "Check",
+   "label": "Motorbike"
+  },
+  {
+   "default": "0",
+   "fieldname": "own_tractor",
+   "fieldtype": "Check",
+   "label": "Tractor"
+  },
+  {
+   "default": "0",
+   "fieldname": "own_no_vehicle",
+   "fieldtype": "Check",
+   "label": "NA"
+  },
+  {
+   "depends_on": "eval:doc.status === \"Approved Aggregator\"&& doc.supplier_type === \"Company/Traders\"",
+   "fieldname": "aggre_button",
+   "fieldtype": "HTML",
+   "label": "aggre_button",
+   "options": "<div class=\"text-right\" id=\"form-step-footer\">\n\t\t\t\t<button class=\"btn btn-success btn-user btn-sm ml-2\">Create User</button></div>",
+   "set_only_once": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-19 15:00:48.911637",
+ "modified_by": "Administrator",
+ "module": "G4F Seller",
+ "name": "Seller Registration Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "route",
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

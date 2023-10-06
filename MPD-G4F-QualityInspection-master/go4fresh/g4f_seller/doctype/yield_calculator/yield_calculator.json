@@ -1,0 +1,160 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-06-30 11:17:49.798873",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "show_image",
+  "your_crop_information_section",
+  "naming_series",
+  "location",
+  "sample",
+  "crop",
+  "seed_variety",
+  "seed_yield",
+  "practices",
+  "sowing_date",
+  "area",
+  "forecast_for_you_section",
+  "estimated_yield",
+  "average_pricekg",
+  "total_sales",
+  "route"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "YC-.YYYY.-"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "crop",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Crop",
+   "options": "G4F Crop List",
+   "reqd": 1
+  },
+  {
+   "fieldname": "seed_variety",
+   "fieldtype": "Data",
+   "label": "Seed Variety"
+  },
+  {
+   "fieldname": "practices",
+   "fieldtype": "Select",
+   "label": "Practices",
+   "options": "\nConventional"
+  },
+  {
+   "fieldname": "sowing_date",
+   "fieldtype": "Date",
+   "label": "Sowing Date"
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Area (Acre)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "your_crop_information_section",
+   "fieldtype": "Section Break",
+   "label": "Your Crop Information"
+  },
+  {
+   "fieldname": "forecast_for_you_section",
+   "fieldtype": "Section Break",
+   "label": "Forecast For You"
+  },
+  {
+   "fieldname": "estimated_yield",
+   "fieldtype": "Int",
+   "label": "Estimated Yield",
+   "read_only": 1
+  },
+  {
+   "fieldname": "average_pricekg",
+   "fieldtype": "Currency",
+   "label": "Average Price/KG",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_sales",
+   "fieldtype": "Currency",
+   "label": "Total Sales",
+   "read_only": 1
+  },
+  {
+   "fieldname": "seed_yield",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Seed Yield (Hectare)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "show_image",
+   "fieldtype": "HTML",
+   "label": "Show image",
+   "options": "<div class=\"img_preview\">\n<img class=\"img-responsive\" src=\"/files/1622362905457.jpeg\">\n</div>"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Route"
+  },
+  {
+   "fieldname": "sample",
+   "fieldtype": "HTML",
+   "label": "sample",
+   "options": "<input id=\"autocomplete\" type=\"text\">"
+  }
+ ],
+ "has_web_view": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-07-07 10:22:30.022331",
+ "modified_by": "Administrator",
+ "module": "G4F Seller",
+ "name": "Yield Calculator",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

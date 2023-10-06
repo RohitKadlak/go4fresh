@@ -1,0 +1,189 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-04-12 17:27:57.334713",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "customer_name",
+  "attach_pdf_or_image",
+  "upload",
+  "section_break_4",
+  "response",
+  "so_no",
+  "customer_po_no",
+  "column_break_8",
+  "po_date",
+  "po_delivery_date",
+  "id",
+  "section_break_12",
+  "found_items",
+  "not_found_items",
+  "sample",
+  "section_break_17",
+  "column_break_18",
+  "upload_in_so"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "POT-.YY.-"
+  },
+  {
+   "depends_on": "eval:doc.customer_name",
+   "fieldname": "attach_pdf_or_image",
+   "fieldtype": "Attach",
+   "label": "Attach PDF OR Image"
+  },
+  {
+   "depends_on": "eval:doc.attach_pdf_or_image",
+   "fieldname": "upload",
+   "fieldtype": "Button",
+   "label": "Upload"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "label": "Customer Name",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.response == 1",
+   "fieldname": "customer_po_no",
+   "fieldtype": "Data",
+   "label": "Customer PO No."
+  },
+  {
+   "depends_on": "eval:doc.response == 1",
+   "fieldname": "po_delivery_date",
+   "fieldtype": "Date",
+   "label": "PO Delivery Date"
+  },
+  {
+   "depends_on": "eval:doc.response == 1",
+   "fieldname": "id",
+   "fieldtype": "Data",
+   "label": "ID"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.response == 1",
+   "fieldname": "found_items",
+   "fieldtype": "Table",
+   "label": "Found Items",
+   "options": "Upload Items"
+  },
+  {
+   "depends_on": "eval:doc.response == 1",
+   "fieldname": "not_found_items",
+   "fieldtype": "Table",
+   "label": "Not Found Items",
+   "options": "Upload Items"
+  },
+  {
+   "fieldname": "sample",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "sample"
+  },
+  {
+   "depends_on": "eval:doc.response == 1",
+   "fieldname": "so_no",
+   "fieldtype": "Link",
+   "label": "SO No.",
+   "options": "Sales Order"
+  },
+  {
+   "default": "0",
+   "fieldname": "response",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Response"
+  },
+  {
+   "depends_on": "eval:doc.response == 1",
+   "fieldname": "po_date",
+   "fieldtype": "Date",
+   "label": "PO Date"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.response == 1",
+   "fieldname": "upload_in_so",
+   "fieldtype": "Button",
+   "label": "Upload In SO"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-04-26 16:21:26.300825",
+ "modified_by": "Administrator",
+ "module": "Go4Fresh",
+ "name": "Upload PO Tool",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Warehouse User",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "G4F Nashik CC",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

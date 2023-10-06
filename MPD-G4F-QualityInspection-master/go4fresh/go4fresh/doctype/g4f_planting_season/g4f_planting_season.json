@@ -1,0 +1,38 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-05-02 20:26:54.052297",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "in_month",
+  "week_number"
+ ],
+ "fields": [
+  {
+   "columns": 3,
+   "fieldname": "in_month",
+   "fieldtype": "Select",
+   "label": "In Month",
+   "options": "\nJune-July\nJan-Feb\nMay-Jun\nJune\nAug-Jan\nSept-Dec\nSept-Oct\nOct-Nov\nAug-March\nSept-Jan\nNov-Dec\nAug-Sept\nDec-Jan\nApril-May\nJun-Aug\nMay-Aug\nApril-Aug\nAug\nJan-March\nSept-Dec\nFeb-March\nJuly-Aug\nFeb-April\nMarch-June\nJun-Sept\nMarch-April\nFeb-March\nMarch-May"
+  },
+  {
+   "columns": 3,
+   "fieldname": "week_number",
+   "fieldtype": "Data",
+   "label": "Week Number"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-06-30 10:41:45.540259",
+ "modified_by": "Administrator",
+ "module": "Go4Fresh",
+ "name": "G4F Planting Season",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

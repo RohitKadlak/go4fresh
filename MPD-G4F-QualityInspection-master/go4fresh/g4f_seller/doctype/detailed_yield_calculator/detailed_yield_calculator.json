@@ -1,0 +1,252 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-07-12 10:22:23.596543",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "show_image",
+  "your_crop_information_section",
+  "naming_series",
+  "location",
+  "crop",
+  "seed_variety",
+  "seed_yield",
+  "practices",
+  "sowing_date",
+  "average_pricekg",
+  "area",
+  "cost_of_cultivation_section",
+  "seed",
+  "fertigation",
+  "crop_protection",
+  "interculture",
+  "harvesting",
+  "irrigation",
+  "transport",
+  "other_expenses",
+  "total_cost",
+  "estimated_yield_grade_wise",
+  "grade_a",
+  "grade_b",
+  "grade_c",
+  "calculate",
+  "forecast_for_you_section",
+  "estimated_yield",
+  "total_sales",
+  "net_income",
+  "route"
+ ],
+ "fields": [
+  {
+   "fieldname": "show_image",
+   "fieldtype": "HTML",
+   "label": "Show image",
+   "options": "<div class=\"img_preview\">\n<img class=\"img-responsive\" src=\"/files/1622362905457.jpeg\">\n</div>"
+  },
+  {
+   "fieldname": "your_crop_information_section",
+   "fieldtype": "Section Break",
+   "label": "Your Crop Information"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "YC-.YYYY.-"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "crop",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Crop",
+   "options": "G4F Crop List",
+   "reqd": 1
+  },
+  {
+   "fieldname": "seed_variety",
+   "fieldtype": "Data",
+   "label": "Seed Variety"
+  },
+  {
+   "fieldname": "seed_yield",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Seed Yield (Hectare)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "practices",
+   "fieldtype": "Select",
+   "label": "Practices",
+   "options": "\nConventional"
+  },
+  {
+   "fieldname": "sowing_date",
+   "fieldtype": "Date",
+   "label": "Sowing Date"
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Area (Acre)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "forecast_for_you_section",
+   "fieldtype": "Section Break",
+   "label": "Forecast For You"
+  },
+  {
+   "fieldname": "estimated_yield",
+   "fieldtype": "Int",
+   "label": "Estimated Yield",
+   "read_only": 1
+  },
+  {
+   "fieldname": "average_pricekg",
+   "fieldtype": "Currency",
+   "label": "Average Price/KG"
+  },
+  {
+   "fieldname": "total_sales",
+   "fieldtype": "Currency",
+   "label": "Total Sales",
+   "read_only": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Route"
+  },
+  {
+   "fieldname": "cost_of_cultivation_section",
+   "fieldtype": "Section Break",
+   "label": "Cost Of Cultivation"
+  },
+  {
+   "fieldname": "seed",
+   "fieldtype": "Currency",
+   "label": "Seed"
+  },
+  {
+   "fieldname": "fertigation",
+   "fieldtype": "Currency",
+   "label": "Fertigation"
+  },
+  {
+   "fieldname": "crop_protection",
+   "fieldtype": "Currency",
+   "label": "Crop Protection"
+  },
+  {
+   "fieldname": "interculture",
+   "fieldtype": "Currency",
+   "label": "Interculture"
+  },
+  {
+   "fieldname": "harvesting",
+   "fieldtype": "Currency",
+   "label": "Harvesting"
+  },
+  {
+   "fieldname": "irrigation",
+   "fieldtype": "Currency",
+   "label": "Irrigation"
+  },
+  {
+   "fieldname": "transport",
+   "fieldtype": "Currency",
+   "label": "Transport"
+  },
+  {
+   "fieldname": "other_expenses",
+   "fieldtype": "Currency",
+   "label": "Other Expenses"
+  },
+  {
+   "depends_on": "eval:doc.total_cost",
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "label": "Total Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "estimated_yield_grade_wise",
+   "fieldtype": "Section Break",
+   "label": "Estimated Yield Grade Wise"
+  },
+  {
+   "fieldname": "grade_a",
+   "fieldtype": "Data",
+   "label": "Grade A"
+  },
+  {
+   "fieldname": "grade_b",
+   "fieldtype": "Data",
+   "label": "Grade B"
+  },
+  {
+   "fieldname": "grade_c",
+   "fieldtype": "Data",
+   "label": "Grade C"
+  },
+  {
+   "fieldname": "net_income",
+   "fieldtype": "Data",
+   "label": "Net Income",
+   "read_only": 1
+  },
+  {
+   "fieldname": "calculate",
+   "fieldtype": "HTML",
+   "label": "Calculate",
+   "options": "<div class=\"cal\"></div>"
+  }
+ ],
+ "has_web_view": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-07-12 18:55:45.589178",
+ "modified_by": "Administrator",
+ "module": "G4F Seller",
+ "name": "Detailed Yield Calculator",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

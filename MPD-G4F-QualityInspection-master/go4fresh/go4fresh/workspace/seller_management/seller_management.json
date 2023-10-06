@@ -1,0 +1,91 @@
+{
+ "cards_label": "Master Data",
+ "category": "Modules",
+ "charts": [],
+ "creation": "2022-04-22 15:31:05.535444",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Seller Management",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Master Data",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Seller Registration List",
+   "link_to": "Supplier",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Seller Registration Form",
+   "link_to": "Seller Registration Form",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Crop List",
+   "link_to": "G4F Crop List",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Crop Planner List",
+   "link_to": "G4F Crop Planner",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2022-12-13 12:08:50.886086",
+ "modified_by": "bhavana.duragkar@mannlowe.com",
+ "module": "Go4Fresh",
+ "name": "Seller Management",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "color": "#449CF0",
+   "doc_view": "New",
+   "label": "&nbsp;<b>1</b>&nbsp; Add Seller Registration",
+   "link_to": "Supplier",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "New",
+   "label": "&nbsp;<b>2</b>&nbsp; Add Crop List",
+   "link_to": "G4F Crop List",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "New",
+   "label": "&nbsp;<b>3</b>&nbsp; Add Crop Planner",
+   "link_to": "G4F Crop Planner",
+   "type": "DocType"
+  }
+ ],
+ "shortcuts_label": "Action"
+}

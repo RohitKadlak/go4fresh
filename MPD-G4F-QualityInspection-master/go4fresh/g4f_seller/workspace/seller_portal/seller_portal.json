@@ -1,0 +1,37 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "creation": "2022-06-30 14:08:04.512970",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Seller Portal",
+ "links": [],
+ "modified": "2023-03-14 21:11:37.085008",
+ "modified_by": "Administrator",
+ "module": "G4F Seller",
+ "name": "Seller Portal",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "label": "Yield Calculator",
+   "link_to": "Yield Calculator",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Farm Book",
+   "link_to": "G4F Farm Book",
+   "type": "DocType"
+  }
+ ]
+}
